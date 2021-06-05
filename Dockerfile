@@ -1,6 +1,6 @@
 FROM debian:9.2
 
-LABEL maintainer "opsxcq@strm.sh"
+LABEL maintainer "Hackershala"
 
 RUN apt-get update && \
     apt-get upgrade -y && \
@@ -30,7 +30,7 @@ RUN chown www-data:www-data -R /var/www/html && \
 
 RUN service mysql start && \
     sleep 3 && \
-    mysql -uroot -pvulnerables -e "CREATE USER app@localhost IDENTIFIED BY 'vulnerables';CREATE DATABASE dvwa;GRANT ALL privileges ON dvwa.* TO 'app'@localhost;"
+    mysql -uroot -pvulnerables -e "CREATE USER hackershala@localhost IDENTIFIED BY 'hackershala';CREATE DATABASE dvwa;GRANT ALL privileges ON dvwa.* TO 'hackershala'@localhost;"
 
 EXPOSE 80
 
